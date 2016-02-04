@@ -1,0 +1,64 @@
+== Definitions
+=== ApiResponse
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|code||false|integer (int32)|
+|type||false|string|
+|message||false|string|
+|===
+
+=== Category
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|===
+
+=== Order
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|petId||false|integer (int64)|
+|quantity||false|integer (int32)|
+|shipDate||false|string (date-time)|
+|status|Order Status|false|enum (placed, approved, delivered)|
+|complete||false|boolean|false
+|===
+
+=== Pet
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|category||false|<<Category>>|
+|name||true|string|
+|photoUrls||true|string array|
+|tags||false|<<Tag>> array|
+|status|pet status in the store|false|enum (available, pending, sold)|
+|===
+
+=== Tag
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|===
+
+=== User
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|username||false|string|
+|firstName||false|string|
+|lastName||false|string|
+|email||false|string|
+|password||false|string|
+|phone||false|string|
+|userStatus|User Status|false|integer (int32)|
+|===
+
